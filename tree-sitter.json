@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "loveyoupeng",
+      "camelcase": "Loveyoupeng",
+      "title": "Loveyoupeng",
+      "scope": "source.loveyoupeng",
+      "file-types": [
+        "lyp"
+      ],
+      "injection-regex": "^loveyoupeng$",
+      "class-name": "TreeSitterLoveyoupeng"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "learning demo for tree-sitter",
+    "authors": [
+      {
+        "name": "loveyoupeng",
+        "email": "loveyoupeng@gmail.com",
+        "url": "https://github.com/loveyoupeng"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/loveyoupeng/tree-sitter-loveyoupeng.git"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
