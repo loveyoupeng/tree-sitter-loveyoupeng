@@ -1,1 +1,2 @@
-hello 
+var a = 1003;
+var b = a;

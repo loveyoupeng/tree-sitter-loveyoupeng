@@ -8,10 +8,14 @@
 // @ts-check
 
 module.exports = grammar({
-  name: "loveyoupeng",
+	name: "loveyoupeng",
+	extras: ($) => [/\s/],
 
-  rules: {
-    // TODO: add the actual grammar rules
-    source_file: $ => "hello"
-  }
+	rules: {
+		source_file: ($) => repeat($.init_statement),
+		init_statement: ($) => seq("var", $.variable_name, "=", $.expression, ";"),
+		expression: ($) => choice($.integer_value, $.variable_name),
+		integer_value: ($) => /\d+/,
+		variable_name: ($) => /[a-zA-Z][a-zA-Z0-9_]*/,
+	},
 });
